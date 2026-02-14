@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLITZ GAMING LINKS</title>
+    <style>
+        body {
+            background-color: #0f0f0f; /* အမည်းရောင် */
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ff0000; /* အနီရောင်ဘောင် */
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 5px; }
+        p { color: #ccc; margin-bottom: 30px; text-align: center; }
+
+        .link-card {
+            width: 100%;
+            max-width: 400px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        /* Live ဖြစ်နေတဲ့ ခလုတ်အတွက် Animation */
+        .live-link {
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .link-card:hover { background: #333; }
+        
+        .badge {
+            background: red;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="ကိုယ့်ပုံLink" alt="BLITZ" class="profile-img">
+    
+    <h1>BLITZ GAMING</h1>
+    <p>ညတိုင်း ၈:၃၀ Live ရှိတယ် <br> ဒီည Starlight Card Giveaway ဖောက်မယ်!</p>
+
+    <a href="ကိုယ့်FB_Page_Link" class="link-card live-link">
+        <span class="badge">LIVE</span> 🔴 Facebook မှာ Live ကြည့်မယ်
+    </a>
+
+    <a href="ကိုယ့်TikTok_Link" class="link-card">
+        🎬 TikTok မှာ Video အတိုလေးတွေကြည့်မယ်
+    </a>
+
+    <a href="ကိုယ့်Giveaway_Video_Link" class="link-card">
+        🎁 Giveaway ကံစမ်းဖို့ ဒီဗီဒီယိုကို Share ပါ
+    </a>
+
+</body>
+</html>
