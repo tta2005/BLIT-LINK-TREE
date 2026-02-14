@@ -6,83 +6,135 @@
     <title>BLITZ GAMING LINKS</title>
     <style>
         body {
-            background-color: #0f0f0f; /* အမည်းရောင် */
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
             color: white;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            min-height: 100vh;
+            padding: 50px 20px;
+            margin: 0;
         }
+
+        /* Profile Section */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 3px solid #ff0000; /* အနီရောင်ဘောင် */
+            border: 4px solid #ff4d4d; /* အနီရောင်တောက်တောက် */
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
+            object-fit: cover;
             margin-bottom: 15px;
         }
-        h1 { font-size: 1.5rem; margin-bottom: 5px; }
-        p { color: #ccc; margin-bottom: 30px; text-align: center; }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .status {
+            color: #ff4d4d;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Links Section */
+        .links-wrapper {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
         .link-card {
-            width: 100%;
-            max-width: 400px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 18px;
+            border-radius: 15px;
             text-align: center;
             text-decoration: none;
             color: white;
-            font-weight: bold;
-            transition: 0.3s;
-            position: relative;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
 
-        /* Live ဖြစ်နေတဲ့ ခလုတ်အတွက် Animation */
-        .live-link {
-            border: 2px solid #ff0000;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-            animation: pulse 1.5s infinite;
+        .link-card:hover {
+            background: rgba(255, 77, 77, 0.2);
+            border-color: #ff4d4d;
+            transform: translateY(-3px);
+        }
+
+        /* Live Highlight Animation */
+        .live-btn {
+            background: linear-gradient(90deg, #ff4d4d, #b30000);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+            0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 77, 77, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
         }
 
-        .link-card:hover { background: #333; }
-        
         .badge {
-            background: red;
+            background: white;
+            color: red;
             padding: 2px 8px;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 0.7rem;
-            margin-right: 8px;
+            vertical-align: middle;
+            margin-right: 10px;
+            font-weight: 900;
+        }
+
+        .footer {
+            margin-top: auto;
+            font-size: 0.8rem;
+            color: #666;
+            padding-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <img src="ကိုယ့်ပုံLink" alt="BLITZ" class="profile-img">
-    
-    <h1>BLITZ GAMING</h1>
-    <p>ညတိုင်း ၈:၃၀ Live ရှိတယ် <br> ဒီည Starlight Card Giveaway ဖောက်မယ်!</p>
+    <div class="profile-container">
+        <img src="https://lh3.googleusercontent.com/d/1X0p0v8P_8QoE7k5G9uWfD5-G4E5F6G7H" alt="BLITZ" class="profile-img">
+        <h1>BLITZ</h1>
+        <div class="status">ညတိုင်း ၈:၃၀ နာရီမှာ Live ရှိတယ်</div>
+    </div>
 
-    <a href="https://www.facebook.com/blitz2412" class="link-card live-link">
-        <span class="badge">LIVE</span> 🔴 Facebook မှာ Live ကြည့်မယ်
-    </a>
+    <div class="links-wrapper">
+        <a href="https://www.facebook.com/blitz2412" class="link-card live-btn" target="_blank">
+            <span class="badge">LIVE</span> 🔴 Facebook မှာ Live ကြည့်မယ်
+        </a>
 
-    <a href="ကိုယ့်TikTok_Link" class="link-card">
-        🎬 TikTok မှာ Video အတိုလေးတွေကြည့်မယ်
-    </a>
+        <a href="https://www.facebook.com/blitz2412/videos" class="link-card" target="_blank">
+            🎁 Starlight Card Giveaway ကံစမ်းရန်
+        </a>
 
-    <a href="ကိုယ့်Giveaway_Video_Link" class="link-card">
-        🎁 Giveaway ကံစမ်းဖို့ ဒီဗီဒီယိုကို Share ပါ
-    </a>
+        <a href="#" class="link-card" target="_blank">
+            🎬 TikTok မှာ Video အတိုများကြည့်ရန်
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 BLITZ GAMING. All Rights Reserved.
+    </div>
 
 </body>
-
 </html>
